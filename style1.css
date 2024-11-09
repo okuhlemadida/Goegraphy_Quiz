@@ -1,0 +1,1335 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: whitesmoke;
+    scroll-behavior: smooth;
+}
+
+.top {
+    overflow: hidden;
+    background-color: transparent;
+    padding: 20px 1px;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.top img {
+    width: 100%;
+
+}
+
+.home-background {
+    width: 100%;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+.top a {
+    float: left;
+    color: white;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    line-height: 25px;
+    border-radius: 4px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.navmenu a {
+    color: black;
+    text-decoration: none;
+}
+
+.navmenu a.active {
+    color: #21d5d8;
+    font-weight: bold;
+}
+
+section {
+    padding: 100px 20px;
+    height: 100vh;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    z-index: 1000;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.top .logo {
+    font-size: 35px;
+    font-weight: bold;
+    transition: 0.4s;
+}
+
+.top a:hover {
+    color: #21d5d8;
+
+}
+
+.navmenu {
+    position: relative;
+    z-index: 10;
+    /* Keep the nav menu on top of the background */
+}
+
+.navmenu {
+    float: right;
+}
+
+.navmenu a {
+    position: relative;
+    text-decoration: none;
+    padding-bottom: 5px;
+
+}
+
+.navmenu a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #21d5d8;
+    transition: width 0.3s ease-in-out;
+}
+
+.navmenu a:hover::after {
+    width: 100%;
+}
+
+@media screen and (max-width: 580px) {
+    .top {
+        padding: 20px 10px !important;
+    }
+
+    .top a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+
+    .navmenu {
+        float: none;
+        text-align: center;
+    }
+}
+
+header {
+    padding-bottom: 50px;
+}
+
+.home-title {
+    position: absolute;
+    bottom: 5%;
+    width: 50%;
+    color: white;
+    padding: 100px;
+
+    padding-left: 50px;
+    z-index: 1;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    overflow: hidden;
+
+}
+
+.carousel-slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+
+
+}
+
+.carousel-slide.active {
+    opacity: 1;
+
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.carousel-caption {
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    font-size: 20px;
+    transform: translateX(-50%);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 150px;
+}
+
+.carousel-controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    color: #21d5d8;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+.getstarted-btn {
+
+    color: white;
+    border-color: #21d5d8;
+    cursor: pointer;
+}
+
+.about {
+    padding-top: 10px;
+}
+
+.about-title {
+    text-align: center;
+}
+
+.hd2 {
+    text-align: center;
+}
+
+.vid {
+    width: 100%;
+    padding: 20px;
+}
+
+.sidebar {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    top: 55px;
+    left: -250px;
+    /* Hide the sidebar initially */
+    background-color: gray;
+    color: white;
+    transition: left 0.3s;
+    display: flex;
+    flex-direction: column;
+    z-index: 1000;
+    overflow-y: auto;
+    margin-top: 9px;
+}
+
+.navmenu {
+    display: flex;
+
+    position: relative;
+    /* Add relative positioning */
+    z-index: 1
+}
+
+.navmenu a {
+    padding: 14px 20px;
+    text-decoration: none;
+    color: white;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.info {
+    margin: 20px;
+}
+
+.mobile-message {
+    display: none;
+    color: red;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    /* Show on hover */
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.sidebar-header {
+    padding: 20px;
+    font-size: 24px;
+    font-weight: bold;
+
+    text-align: center;
+    border-bottom: 1px solid #37475a;
+    position: relative;
+}
+
+.sidebar-header .close-button {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+
+}
+
+.sidebar-menu {
+    flex: 1;
+}
+
+.sidebar-menu a {
+    display: block;
+    padding: 15px 20px;
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: background-color 0.3s;
+    border-bottom: 1px solid #37475a;
+}
+
+.sidebar-menu a:hover {
+    background-color: #37475a;
+}
+
+.sidebar-menu a:active {
+    background-color: whitesmoke;
+    color: whitesmoke;
+}
+
+.about-text {
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* Full screen height */
+    ;
+    box-sizing: border-box;
+    text-align: left;
+
+}
+
+.about-text img {
+    width: 80%;
+    height: auto;
+    margin-right: 20px;
+}
+
+.about-title span {
+    color: #02b6b9;
+}
+
+.text {
+    max-width: 50%;
+    margin: 100px;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 1000px) {
+    .about-text {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-text img {
+        max-width: 80%;
+        margin-right: 0;
+
+    }
+
+    .about-text .text {
+        max-width: 100%;
+        margin: 0;
+    }
+}
+
+.pictures {
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+    /* Decrease the gap between items */
+    padding: 10px;
+    max-width: 800px;
+    /* Set a maximum width */
+    margin: 0 auto;
+    /* Center the container */
+
+}
+
+.pictures>div {
+    flex: 0 0 400px;
+    /* Adjust the flex property to limit the width */
+    /* Change the first value (0) to set a base size, 
+       the second value (1) allows for growth, and the third (200px) is the base width */
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.pictures img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+
+    border-radius: 5px;
+
+}
+
+.categories {
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    height: 100px;
+}
+
+
+
+
+.cat {
+
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 50px;
+    max-width: 1200px;
+    /* Set a maximum width */
+    margin: 0 auto;
+    /* Center the container */
+}
+
+.cat>div {
+    flex: 1;
+    /* Make each category take equal space */
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    /* Center the content */
+}
+
+.cat img {
+    width: 100%;
+    height: 200px;
+    /* Set a fixed height for all images */
+    object-fit: cover;
+    /* Ensures images scale correctly without distortion */
+    border-radius: 5px;
+    margin: auto;
+
+}
+
+.in-categories {
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    height: 100px;
+}
+
+/* Optional: Media queries for responsive design */
+@media (max-width: 768px) {
+    .cat {
+        flex-direction: column;
+        /* Stack the items vertically on smaller screens */
+    }
+
+    .cat>div {
+        margin-bottom: 20px;
+    }
+}
+
+/*The tables*/
+.question {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.question td,
+.question th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.question tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.question tr:hover {
+    background-color: #ddd;
+}
+
+.question th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #21d5d8;
+    color: rgb(14, 14, 14);
+}
+
+.leader {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.leader td,
+.leader th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.leader tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.leader tr:hover {
+    background-color: #ddd;
+}
+
+.leader th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #21d5d8;
+    color: rgb(14, 14, 14);
+}
+
+.feedback {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.feedback td,
+.feedback th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.feedback tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.feedback tr:hover {
+    background-color: #ddd;
+}
+
+.feedback th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #21d5d8;
+    color: rgb(14, 14, 14);
+}
+
+.tables {
+    padding: 50px;
+}
+
+.link-container {
+    text-align: center;
+    /* Center the link horizontally */
+    padding-bottom: 90px;
+}
+
+.review {
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 20px;
+    background-color: #21d5d8;
+    color: white;
+    border-radius: 5px;
+}
+
+.containerr {
+    display: flex;
+    justify-content: center;
+    /* Centers horizontally */
+    align-items: center;
+    /* Centers vertically */
+
+    /* Full viewport height */
+}
+
+form {
+    padding: 10px;
+    background-color: whitesmoke;
+    margin-bottom: 10px;
+}
+
+form label {
+    display: left;
+    margin-bottom: 5px;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+form input,
+form textarea {
+    width: 20%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form button {
+    background-color: #02b6b9;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.info-wrap {
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    width: 90%;
+    /* Optional: Limit the width */
+    align-items: center;
+    background-color: white;
+}
+
+
+.info i {
+    font-size: 20px;
+    color: #490a7c;
+    float: left;
+    width: 44px;
+    height: 44px;
+    background: #cbeff0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+}
+
+.info h4 {
+    padding: 0 0 0 60px;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #433f39;
+    font-family: "Poppins", sans-serif;
+}
+
+.info p {
+    padding: 0 0 0 60px;
+    margin-bottom: 0;
+    font-size: 14px;
+    color: #7a6878;
+}
+
+.info:hover i {
+    background: #21d5d8;
+    color: #fff;
+}
+
+.check-double {
+    color: #21d5d8;
+}
+
+.icon-text {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    /* Adds space between items */
+}
+
+.icon-item {
+    display: flex;
+    align-items: center;
+
+}
+
+.icon-item i {
+    margin-right: 10px;
+    /* Adds space between icon and text */
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Full screen height */
+    padding: 30px;
+    gap: 10px;
+
+}
+
+@media (max-width: 600px) {
+    .info {
+        flex-direction: row;
+        /* Stack items vertically on small screens */
+        align-items: flex-start;
+        /*Align items to the start */
+    }
+
+    .info h5 {
+        margin: 0;
+        /* Space between icon and text on small screens */
+    }
+
+}
+
+/*LOGIN*/
+.container {
+    width: 100%;
+    height: 100vh;
+    background-image: url('CoolRubrik.jpg');
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    cursor: pointer;
+
+}
+
+.form-box {
+    width: 90%;
+    max-width: 450px;
+    position: absolute;
+    color: black;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: whitesmoke;
+    padding: 50px 60px 70px;
+    text-align: center;
+    border-radius: 30px;
+    cursor: pointer;
+
+}
+
+.form-box {
+    width: 90%;
+    max-width: 450px;
+    position: absolute;
+    color: black;
+    background-color: whitesmoke;
+    padding: 50px 60px 70px;
+    text-align: center;
+    border-radius: 30px;
+
+}
+
+.developers {
+    text-align: center;
+}
+
+.input-field {
+    background: lightgray;
+    margin: 15px 0;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+
+
+}
+
+input {
+    width: 100%;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    padding: 18px 15px;
+    color: black;
+}
+
+.input-field i {
+    margin-left: 15px;
+    color: black;
+}
+
+.submit1 {
+    display: flex;
+    margin-bottom: 10px;
+    background: #21d5d8;
+    border-radius: 20px;
+    cursor: pointer;
+    padding: 10px;
+    justify-content: center;
+    /* Centers the input horizontally */
+    align-items: center;
+    /* Centers the input vertically */
+}
+
+.submit1 input[type="submit"] {
+    background: transparent;
+    /* Make the input inherit the container's background */
+    border: none;
+    /* Remove default input border */
+    color: white;
+    /* Set text color */
+    font-size: 16px;
+    /* Adjust font size */
+    cursor: pointer;
+    /* Ensure cursor changes on hover */
+    padding: 10px 20px;
+    /* Add padding for better button size */
+    text-align: center;
+    /* Center text inside button */
+}
+
+.submit1 input[type="submit"]:hover {
+    background: #1aa7aa;
+    /* Change background on hover */
+}
+
+
+/*FOOTER*/
+.footer {
+    text-align: center;
+    background-color: rgb(190, 185, 185);
+    padding: 10px;
+
+}
+
+#quiz-container {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    width: 800px;
+    margin: auto;
+    text-align: center;
+}
+
+.highlight {
+    background-color: yellow;
+}
+
+.correct {
+    color: green;
+    font-weight: bold;
+}
+
+.incorrect {
+    color: red;
+    font-weight: bold;
+}
+
+#nextQuestionBtn {
+    display: none;
+    color: #fff;
+    background-color: #21d5d8;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 16px;
+}
+
+#nextQuestionBtn:hover {
+    background-color: #18a3a6;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 600px) {
+    #quiz-container {
+        padding: 15px;
+        /* Reduce padding on smaller screens */
+    }
+
+    #nextQuestionBtn {
+        font-size: 14px;
+        /* Adjust font size */
+        padding: 8px;
+        /* Reduce padding for the button */
+    }
+
+    .option {
+        display: block;
+        /* Make options stack vertically */
+        margin: 10px 0;
+        /* Spacing between options */
+    }
+}
+
+@media (max-width: 400px) {
+    #quiz-container {
+        width: 95%;
+        /* Further reduce width for very small screens */
+    }
+
+    #nextQuestionBtn {
+        font-size: 14px;
+        /* Keep font size smaller */
+        padding: 6px;
+        /* Further reduce padding */
+    }
+}
+
+.pcontainer {
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+.content {
+    column-count: 3;
+    /* Default column count */
+    column-gap: 20px;
+    /* Space between columns */
+    transition: column-count 0.3s ease;
+    /* Smooth transition for column count change */
+}
+
+.controls {
+    margin-top: 20px;
+    text-align: center;
+}
+
+button {
+    margin: 5px;
+    padding: 10px 15px;
+    border: none;
+    background-color: #21d5d8;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #18a3a6;
+    /* Darker on hover */
+}
+
+/* Form container */
+form {
+    max-width: 400px;
+    /* Limit the width of the form */
+    margin: 0 auto;
+    /* Center the form horizontally */
+    padding: 20px;
+    /* Add padding inside the form */
+    background-color: #f4f4f4;
+    /* Light background color */
+    border-radius: 10px;
+    /* Round the corners of the form */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    /* Soft shadow for depth */
+}
+
+/* Label styling */
+form label {
+    font-size: 16px;
+    /* Larger label text */
+    margin-bottom: 8px;
+    /* Space between label and input */
+    color: #333;
+    /* Darker text color */
+}
+
+/* Input styling */
+form input[type="text"],
+form input[type="email"],
+form input[type="password"] {
+    width: 100%;
+    /* Full width input fields */
+    padding: 10px;
+    /* Space inside the input fields */
+    margin-bottom: 15px;
+    /* Space between each input */
+    border: 1px solid #ccc;
+    /* Light border around inputs */
+    border-radius: 5px;
+    /* Rounded corners for inputs */
+    font-size: 14px;
+    /* Comfortable font size */
+    background-color: #fff;
+    /* White background for inputs */
+    box-sizing: border-box;
+    /* Ensure padding is included in width */
+}
+
+/* Input focus effect */
+form input:focus {
+    border-color: #21d5d8;
+    /* Highlight border on focus */
+    outline: none;
+    /* Remove default outline */
+    box-shadow: 0 0 5px rgba(33, 213, 216, 0.5);
+    /* Soft shadow effect */
+}
+
+/* Submit button styling */
+form input[type="submit"] {
+    background-color: #21d5d8;
+    /* Custom background color */
+    color: white;
+    /* White text */
+    font-size: 16px;
+    /* Larger text size */
+    padding: 10px 20px;
+    /* Add padding to the button */
+    border: none;
+    /* Remove default border */
+    border-radius: 5px;
+    /* Rounded corners */
+    cursor: pointer;
+    /* Pointer cursor on hover */
+    transition: background-color 0.3s ease;
+    /* Smooth hover transition */
+}
+
+form input[type="submit"]:hover {
+    background-color: #1aa7aa;
+    /* Darker background on hover */
+}
+
+/* Additional styling for small text (links, messages) */
+form p {
+    font-size: 14px;
+    /* Slightly smaller text */
+    color: #555;
+    /* Softer text color */
+    margin-top: 10px;
+    /* Add space above the paragraph */
+}
+
+/* Link styling */
+form a {
+    color: #21d5d8;
+    /* Custom link color */
+    text-decoration: none;
+    /* Remove default underline */
+}
+
+form a:hover {
+    text-decoration: underline;
+    /* Underline on hover */
+}
+
+.leaderboard {
+    width: 1000px;
+    padding: 20px;
+}
+
+.leaderboarddd {
+    margin: 20px auto;
+    /* Centering the leaderboard container */
+    padding: 10px;
+    /* Padding around the leaderboard */
+    max-width: 1000px;
+    /* Max width for large screens */
+    width: 90%;
+    /* Full width for small screens */
+}
+
+.leaderboard h2,
+.leaderboard h3 {
+    text-align: center;
+    /* Centering titles */
+}
+
+/* Responsive table styles */
+table {
+    width: 100%;
+    /* Full width for tables */
+    border-collapse: collapse;
+    /* Collapsing borders */
+    margin-bottom: 20px;
+    /* Space between tables */
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    /* Border for table cells */
+    padding: 8px;
+    /* Padding inside table cells */
+    text-align: left;
+    /* Left-align text */
+}
+
+th {
+    background-color: #21d5d8;
+    /* Header background color */
+    color: white;
+    /* Header text color */
+}
+
+/* Responsive adjustments for small screens */
+@media (max-width: 600px) {
+
+    th,
+    td {
+        padding: 6px;
+        /* Reduced padding for smaller screens */
+        font-size: 14px;
+        /* Smaller font size */
+    }
+
+    .leaderboard {
+        overflow-x: auto;
+        /* Allow horizontal scrolling */
+    }
+}
+
+
+
+
+
+#submit {
+    background-color: #21d5d8;
+    /* Change to desired background color */
+    color: white;
+    /* Text color */
+    font-size: 18px;
+    /* Increase font size */
+    padding: 12px 24px;
+    /* Increase padding (top-bottom, left-right) */
+    border: none;
+    border-radius: 5px;
+    width: 150px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#submit:hover {
+    background-color: #1bb0b2;
+}
+
+.footer-section {
+    background-color: #474747;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.footer-columns {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.footer-column {
+    max-width: 250px;
+    margin: 10px 0;
+}
+
+.footer-column h3 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    color: #21d5d8;
+}
+
+.footer-column h3::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: #21d5d8;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+.footer-column p,
+.footer-column ul {
+    font-size: 1em;
+    color: #d1d1d1;
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    color: #d1d1d1;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+    color: #21d5d8;
+}
+
+.footer-bottom {
+    padding-top: 20px;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 0.9em;
+    color: #21d5d8;
+}
+
+.about-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 100px;
+}
+
+.text-section {
+    max-width: 50%;
+    /* Ensures text takes up half the space */
+    flex: 1;
+    /* Makes sure the text takes up available space */
+    padding: 20px;
+}
+
+.vid {
+    max-width: 45%;
+    height: 500px;
+}
+
+.sample {
+    text-align: center;
+}
+
+
+.about-title{
+    text-align: center;
+}
+.testimonials {
+    padding: 50px 0; /* Add padding to the testimonials section */
+}
+
+.swiper-wrapper {
+    display: flex; /* Use flexbox for the swiper wrapper */
+    gap: 20px; /* Space between cards */
+}
+
+.testimonial-card {
+    flex: 1; /* Allow cards to grow and fill space evenly */
+    background-color: #fff; /* White background for the card */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+    padding: 20px; /* Padding inside the card */
+    text-align: center; /* Center text alignment */
+    transition: transform 0.3s; /* Smooth transform for hover effect */
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+}
+
+.testimonial-card p {
+    font-style: italic; /* Italics for the feedback text */
+    margin: 0 0 15px; /* Margin below the paragraph */
+}
+
+.quote-icon-left,
+.quote-icon-right {
+    font-size: 20px; /* Font size for quote icons */
+    color: #f39c12; /* Color for quote icons */
+}
+
+h3 {
+    margin: 10px 0 5px; /* Margin around username */
+    font-size: 1.2em; /* Font size for the username */
+}
+
+h4 {
+    color: #777; /* Gray color for optional info */
+    margin: 0; /* Reset margin */
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+    .testimonial-card {
+        margin-bottom: 20px; /* Space between cards on smaller screens */
+    }
+}
+.testmons{text-align: center;}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style1.css"/>
+    <title>Sign Up</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="form-box">
+            <h1>Sign Up</h1>
+            <div id="error-message" class="error"></div>
+            <form action="sign.php" method="post" name="signupForm" onsubmit="return validateSignupForm()">
+                <div class="input-group">
+                    <div class="input-field">
+                        <label for="user_type">Select User Type:</label>
+                        <select id="user_type" name="user_type" required>
+                            
+                            <option value="admin">Admin</option>
+                            <option value="user">User</option>
+                        </select><br><br>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <div class="input-field">
+                        <input type="text" placeholder="Username" id="username" name="username" required><br><br>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <div class="input-field">
+                        <input type="email" placeholder="Email Address" id="email" name="email" required><br><br>
+                    </div>
+                </div>
+
+
+                <div class="input-group">
+                    <div class="input-field">
+                        <input type="password" placeholder="Password" id="password" name="password" required><br><br>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <div class="input-field">
+                        <input type="password" placeholder="Confirm Password" id="confirm_password"
+                            name="confirm_password" required><br><br>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    
+                        <input type="submit" name="submit" id="submit" value="Register">
+                    
+                </div>
+                <div class="links">
+                    <p>Already have an account? <a href="login.php">Click here</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</body>
+<script src="script.js"></script>
+
+</html>
